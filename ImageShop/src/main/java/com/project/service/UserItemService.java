@@ -2,6 +2,8 @@ package com.project.service;
 
 import java.util.List;
 
+import com.project.domain.Item;
+import com.project.domain.Member;
 import com.project.domain.UserItem;
 
 public interface UserItemService {

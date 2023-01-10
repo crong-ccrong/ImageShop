@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -24,6 +25,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.project.common.security.domain.CustomUser;
+import com.project.domain.Item;
+import com.project.domain.Member;
+import com.project.service.ItemService;
+import com.project.service.MemberService;
+import com.project.service.UserItemService;
 
 @Controller
 @RequestMapping("/item")

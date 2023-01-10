@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +21,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.domain.UserItem;
 import com.project.service.UserItemService;
+import com.project.common.security.domain.CustomUser;
+import com.project.domain.Member;
 
 @Controller
 @RequestMapping("/useritem")

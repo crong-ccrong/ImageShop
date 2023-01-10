@@ -1,7 +1,7 @@
 package com.project.mapper;
 
 import java.util.List;
-
+import com.project.domain.ChargeCoin;
 import com.project.domain.PayCoin;
 
 public interface CoinMapper {
@@ -10,7 +10,7 @@ public interface CoinMapper {
 	public void create(ChargeCoin chargeCoin) throws Exception;
 
 	// 코인 충전
-	public void charge(hargeCoin chargeCoin) throws Exception;
+	public void charge(ChargeCoin chargeCoin) throws Exception;
 
 	// 충전 내역 조회
 	public List<ChargeCoin> list(int userNo) throws Exception;
